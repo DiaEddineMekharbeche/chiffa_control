@@ -23,13 +23,14 @@ class SignUpTextField extends StatefulWidget {
 
 class _SignUpTextFieldState extends State<SignUpTextField> {
   bool isobscured = true;
-  
+
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
         validator: (value) => widget.validatorFunction(value),
         style: TextStyle(
+          
                 color: Colors.black, fontSize: 17.sp, height: 1.sp),
         controller: widget.textController,
         obscureText: widget.obscuredIcon ? isobscured : false,
