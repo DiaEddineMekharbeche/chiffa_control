@@ -1,3 +1,5 @@
+import 'package:chiffa_control/constants.dart';
+import 'package:chiffa_control/pages/dashboard/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -14,11 +16,11 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: backgroundColor,
         body: IndexedStack(
           index: currentindex,
           children: const[
-           Text('Dashboard'),
+          Dashboard(),
             Text ('second page'),
             Text ('third page'),
             Text ('fourd  page'),
@@ -29,8 +31,8 @@ class _NavBarState extends State<NavBar> {
           color: Colors.grey.withOpacity(0.5),
           child: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
-            backgroundColor: const Color(0xff2954E7),
-            selectedItemColor: const Color(0xffF2C94C),
+            backgroundColor: primaryColor,
+            selectedItemColor: secondryColor,
             unselectedItemColor: Colors.grey.withOpacity(0.9),
             showSelectedLabels: false,
             showUnselectedLabels: false,
@@ -51,28 +53,28 @@ class _NavBarState extends State<NavBar> {
                   color: Colors.white,height: 30.h,width: 30.w,
                 ),
                 activeIcon: Image.asset('assets/images/Home.png',height: 30.h,width: 30.w,
-                    color: const Color(0xffF2C94C)),
+                    color: textblackColor),
                 label: 'acceuil'.tr,
               ),
               BottomNavigationBarItem(
                 icon: Image.asset('assets/images/Link.png',height: 30.h,width: 30.w,
                     color: const Color(0xffFFFFFF)),
                 activeIcon: Image.asset('assets/images/Link.png',height: 30.h,width: 30.w,
-                    color: const Color(0xffF2C94C)),
+                    color:textblackColor),
                 label: 'appareils'.tr,
               ),
               BottomNavigationBarItem(
                 icon: Image.asset('assets/images/Calendar.png',height: 30.h,width: 30.w,
                     color: const Color(0xffFFFFFF)),
                 activeIcon: Image.asset('assets/images/Calendar.png',height: 30.h,width: 30.w,
-                    color: const Color(0xffF2C94C)),
+                    color: textblackColor),
                 label: 'rendez-vous',
               ),
               BottomNavigationBarItem(
                 icon: Image.asset('assets/images/Profile.png',height: 30.h,width: 30.w,
                     color: const Color(0xffFFFFFF)),
                 activeIcon: Image.asset('assets/images/Profile.png',height: 30.h,width: 30.w,
-                    color: const Color(0xffF2C94C)),
+                    color: textblackColor),
                 label: 'profil'.tr,
               ),
             ],
