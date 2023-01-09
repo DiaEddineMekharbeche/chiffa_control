@@ -23,6 +23,7 @@ class SignUpTextField extends StatefulWidget {
 
 class _SignUpTextFieldState extends State<SignUpTextField> {
   bool isobscured = true;
+  
 
   @override
   Widget build(BuildContext context) {
