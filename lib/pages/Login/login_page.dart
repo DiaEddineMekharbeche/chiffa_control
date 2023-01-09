@@ -1,8 +1,11 @@
 
 
 
+import 'package:chiffa_control/constants.dart';
 import 'package:chiffa_control/controllers/authController.dart';
 import 'package:chiffa_control/pages/Login/auth_button.dart';
+import 'package:chiffa_control/pages/Login/forget_password.dart';
+import 'package:chiffa_control/pages/Login/reset_password_page.dart';
 import 'package:chiffa_control/pages/Login/signupTextField.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -49,10 +52,10 @@ class LoginPage extends StatelessWidget {
                 ),
                 SizedBox(height: 24.h),
                 Text(
-                  'email'.tr,
+                  'Email'.tr,
                   style: TextStyle(
                       fontSize: 14.sp,
-                      fontWeight: FontWeight.w100,
+                      fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.normal,
                       color: const Color(0xff4F4F4F)),
                 ),
@@ -67,7 +70,7 @@ class LoginPage extends StatelessWidget {
                     }),
                 SizedBox(height: 20.h),
                 Text(
-                  'Password'.tr,
+                  'password'.tr,
                   style: TextStyle(
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w600,
@@ -84,7 +87,7 @@ class LoginPage extends StatelessWidget {
                     validatorFunction: (value) {
                       return c.validatePassword(value);
                     }),
-                SizedBox(height: 5.h),
+                SizedBox(height: 12.h),
                 GestureDetector(
                   child: Container(
                     alignment: Alignment.centerRight,
@@ -92,12 +95,12 @@ class LoginPage extends StatelessWidget {
                         textAlign: TextAlign.right,
                         style: TextStyle(
                           fontSize: 12.sp,
-                          color: const Color(0xff2954E7),
+                          color: primaryColorDeep,
                           fontWeight: FontWeight.w500,
                         )),
                   ),
                   onTap: () {
-                    Get.toNamed('/forgotpassword-page');
+                    Get.to(()=>  ForgotPassword());
                   },
                 ),
                 SizedBox(height: 24.h),

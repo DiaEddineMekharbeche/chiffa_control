@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:chiffa_control/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,10 +13,10 @@ class AuthButthon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 45.h,
+      height: 50.h,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8), color: const Color(0xff2954E7)),
+          borderRadius: BorderRadius.circular(8), color: primaryColorDeep),
       child: MaterialButton(
         onPressed: () {
           onClick();

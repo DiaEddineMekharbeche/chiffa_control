@@ -1,6 +1,8 @@
 import 'package:chiffa_control/pages/navigationbar.dart';
+import 'package:chiffa_control/translation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
@@ -36,6 +38,10 @@ class MyApp extends StatelessWidget {
         designSize: const Size(375, 812),
         builder: (context, child) {
           return  GetMaterialApp(
+                translations: TranslationScript(),
+              debugShowCheckedModeBanner: false,
+              locale: Get.deviceLocale,
+              fallbackLocale: const Locale('en_US'),
             home: FutureBuilder(
                 future: checkToken(),
                 builder: (context, snapshot) {
