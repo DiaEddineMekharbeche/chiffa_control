@@ -1,17 +1,18 @@
-
 import 'package:chiffa_control/constants.dart';
 
 import 'package:chiffa_control/pages/dashboard/card_bordro_facture.dart';
+import 'package:chiffa_control/pages/dashboard/card_params.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Dashboard extends StatelessWidget {
-  const Dashboard({super.key});
+
+  Dashboard({super.key});
 
   @override
   Widget build(BuildContext context) {
     var list = ['ahmed', 'maher', 'hichem'];
-    var discription = ['teste klk chose','alors ','bbbbbbbbbbbbbbbbbbbbbb'];
+    var discription = ['teste klk chose', 'alors ', 'bbbbbbbbbbbbbbbbbbbbbb'];
 
     return Scaffold(
       backgroundColor: Colors.white.withOpacity(0.9),
@@ -47,7 +48,7 @@ class Dashboard extends StatelessWidget {
                 Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color:primaryColor,
+                      color: primaryColor,
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: const Icon(Icons.person)),
@@ -110,7 +111,23 @@ class Dashboard extends StatelessWidget {
               ),
             ),
           ),
-         
+          const SizedBox(height: 20,),
+          // list view grid
+          Expanded(
+            child: GridView.count(  
+                  crossAxisCount:2,  
+                  crossAxisSpacing: 4.0,  
+                  mainAxisSpacing: 8.0,  
+                  children: const [
+          CardParms( title: 'statistique',Icon: 'assets/images/tableau-de-bord.png'),
+          CardParms( title: 'classification',Icon: 'assets/images/facturep.png'),
+          CardParms( title: 'Suivi Psyco',Icon: 'assets/images/niche.png'),
+          CardParms( title: 'ahmed',Icon: ''),
+          CardParms( title: 'ahmed',Icon: ''),
+          CardParms( title: 'ahmed',Icon: '')
+                  ] 
+                  ),
+          )  
         ],
       )),
     );

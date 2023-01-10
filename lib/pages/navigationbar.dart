@@ -19,7 +19,7 @@ class _NavBarState extends State<NavBar> {
         backgroundColor: backgroundColor,
         body: IndexedStack(
           index: currentindex,
-          children: const[
+          children: [
           Dashboard(),
             Text ('second page'),
             Text ('third page'),
